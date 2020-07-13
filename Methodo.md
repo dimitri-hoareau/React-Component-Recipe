@@ -50,4 +50,14 @@ Identifier pour chaque composants les données dynamiques dont il aura besoin.
 > };
 > ```
 
-A vous de jouer :muscle:
+## PropTypes
+
+Les props attendus doivent être documentés, notamment le type de données attendues pour chaque prop.
+
+Nous utilisons la bibliothèque PropTypes pour décrire à React le type attendu pour chaque props.
+
+> #### La documentation est votre meilleure amie, lisez-là :grin:
+>
+> https://fr.reactjs.org/docs/typechecking-with-proptypes.html
+>
+> A vous de jouer :muscle:

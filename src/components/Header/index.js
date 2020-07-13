@@ -1,20 +1,28 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-const Header = () => (
-  <header className="header">
-    <img
-      src="https://images.pexels.com/photos/53483/strawberries-crepe-dessert-sweet-53483.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-      alt="Lorem ipsum"
-      className="header-image"
-    />
-    <div className="header-content">
-      <h1 className="header-title">Lorem ipsum</h1>
-      <p className="header-infos">
-        Lorem - Ipsum
-      </p>
-    </div>
-  </header>
-);
+const Header = (props) => {
+  console.log(props);
+  const { title, author, difficulty, thumbnail } = props;
+  return (
+    <header className="header">
+      <img src={thumbnail} alt="Lorem ipsum" className="header-image" />
+      <div className="header-content">
+        <h1 className="header-title">{title}</h1>
+        <p className="header-infos">
+          {author} - {difficulty}
+        </p>
+      </div>
+    </header>
+  );
+};
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  difficulty: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
+};
 
 export default Header;

@@ -6,14 +6,14 @@ import "./style.scss";
 const Ingredients = ({ list }) => (
   <div className="ingredients">
     <ul>
-      {list.map((ingredientObject) => {
+      {list.map((ingredientObject) => (
         <li className="ingredient">
           <span className="ingredient-quantity">
             {ingredientObject.quantity} {ingredientObject.unit}
           </span>
           {ingredientObject.name}
-        </li>;
-      })}
+        </li>
+      ))}
     </ul>
   </div>
 );

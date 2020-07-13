@@ -5,8 +5,10 @@ import "./style.scss";
 
 const Etapes = ({ list }) => (
   <ul className="steps">
-    {list.map((elemString) => (
-      <li className="step">{elemString}</li>
+    {list.map((elemString, index) => (
+      <li key={"etape" + index} className="step">
+        {elemString}
+      </li>
     ))}
   </ul>
 );

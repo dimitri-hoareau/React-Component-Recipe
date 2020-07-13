@@ -5,17 +5,25 @@ import Etapes from "../Etapes";
 
 import "./style.scss";
 
+import data from "../../data/recipe";
+
 const Recipe = () => (
   <div className="recipe">
-    <Header
-      title="Dorian is a..."
-      difficulty="Facile"
-      author="Dorian"
-      thumbnail="https://www.influencia.net/data/classes/actualite/actu_7920_image2012rectangle_petite.jpg"
-    />
+    <Header {...data} />
     <Ingredients />
-    <Etapes />
+    <Etapes list={data.instructions} />
   </div>
 );
 
 export default Recipe;
+
+{
+  /* <Header
+      title={data.title}
+      difficulty={data.difficulty}
+      author={data.author}
+      thumbnail={data.thumbnail}
+      instruction: ['']
+      ingredients={[{}, {}]}
+    /> */
+}

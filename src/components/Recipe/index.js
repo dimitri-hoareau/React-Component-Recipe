@@ -10,7 +10,7 @@ import data from "../../data/recipe";
 const Recipe = () => (
   <div className="recipe">
     <Header {...data} />
-    <Ingredients />
+    <Ingredients list={data.ingredients} />
     <Etapes list={data.instructions} />
   </div>
 );

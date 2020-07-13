@@ -7,7 +7,7 @@ const Ingredients = ({ list }) => (
   <div className="ingredients">
     <ul>
       {list.map((ingredientObject) => (
-        <li className="ingredient">
+        <li key={ingredientObject.id} className="ingredient">
           <span className="ingredient-quantity">
             {ingredientObject.quantity} {ingredientObject.unit}
           </span>
